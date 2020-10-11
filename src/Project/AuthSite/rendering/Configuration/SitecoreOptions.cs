@@ -1,6 +1,6 @@
 using System;
 
-namespace sitecore_netcore_auth.Configuration
+namespace Project.AuthSite.Rendering.Configuration
 {
     /// <summary>
     /// Example of a custom bound configuration object. Used in the Startup class to bind configuration options

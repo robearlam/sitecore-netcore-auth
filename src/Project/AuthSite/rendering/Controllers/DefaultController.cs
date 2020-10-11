@@ -1,12 +1,12 @@
 using System.Net;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using sitecore_netcore_auth.Models;
+using Project.AuthSite.Rendering.Models;
 using Sitecore.AspNet.RenderingEngine;
 using Sitecore.AspNet.RenderingEngine.Filters;
 using Sitecore.LayoutService.Client.Exceptions;
 
-namespace sitecore_netcore_auth.Controllers
+namespace Project.AuthSite.Rendering.Controllers
 {
     /// <summary>
     /// The entry point controller for this sample site.

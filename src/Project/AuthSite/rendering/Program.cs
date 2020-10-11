@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace sitecore_netcore_auth
+namespace Project.AuthSite.Rendering
 {
     public class Program
     {

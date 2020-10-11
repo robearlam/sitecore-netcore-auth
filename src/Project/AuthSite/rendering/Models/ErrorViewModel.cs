@@ -1,4 +1,4 @@
-namespace sitecore_netcore_auth.Models
+namespace Project.AuthSite.Rendering.Models
 {
     public class ErrorViewModel
     {

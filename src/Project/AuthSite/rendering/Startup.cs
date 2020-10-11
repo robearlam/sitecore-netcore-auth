@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using sitecore_netcore_auth.Configuration;
-using sitecore_netcore_auth.Models;
+using Project.AuthSite.Rendering.Configuration;
+using Project.AuthSite.Rendering.Models;
 using Sitecore.AspNet.ExperienceEditor;
 using Sitecore.AspNet.RenderingEngine.Extensions;
 using Sitecore.AspNet.RenderingEngine.Localization;
@@ -17,7 +17,7 @@ using Sitecore.LayoutService.Client.Extensions;
 using Sitecore.LayoutService.Client.Newtonsoft.Extensions;
 using Sitecore.LayoutService.Client.Request;
 
-namespace sitecore_netcore_auth
+namespace Project.AuthSite.Rendering
 {
     public class Startup
     {

@@ -1,5 +1,5 @@
 {
-    "namespace": "Items",
+    "namespace": "Project.AuthSite",
     "items" : {
         "includes": [
             {

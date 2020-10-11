@@ -31,10 +31,10 @@ RUN nuget restore -Verbosity quiet
 COPY src/ ./src/
 
 # Build the Sitecore main platform artifacts
-RUN msbuild .\src\platform\Platform.csproj /p:Configuration=$env:BUILD_CONFIGURATION /m /p:DeployOnBuild=true /p:PublishProfile=Local
+RUN msbuild .\src\Project\AuthSite\platform\Project.AuthSite.Platform.csproj /p:Configuration=$env:BUILD_CONFIGURATION /m /p:DeployOnBuild=true /p:PublishProfile=Local
 
 # Build the rendering host
-WORKDIR /build/src/rendering
+WORKDIR /build/src/Project/AuthSite/rendering
 RUN dotnet publish -c $env:BUILD_CONFIGURATION -o /build/rendering --no-restore
 
 # Save the artifacts for copying into other images (see 'cm' and 'rendering' Dockerfiles).

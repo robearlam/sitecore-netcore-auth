@@ -1,6 +1,6 @@
 using Sitecore.LayoutService.Client.Response.Model.Fields;
 
-namespace sitecore_netcore_auth.Models
+namespace Project.AuthSite.Rendering.Models
 {
     /// <summary>
     /// An example of binding to component fields (usually a serialized datasource item).

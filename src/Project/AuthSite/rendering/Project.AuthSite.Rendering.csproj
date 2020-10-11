@@ -5,8 +5,8 @@
     <UserSecretsId>0dd80cb0-354b-425e-aa55-eb26c6f571fc</UserSecretsId>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..\..\..</DockerfileContext>
-    <RootNamespace>sitecore_netcore_auth</RootNamespace>
-    <AssemblyName>sitecore-netcore-auth</AssemblyName>
+    <RootNamespace>Project.AuthSite.Rendering</RootNamespace>
+    <AssemblyName>Project.AuthSite.Rendering</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

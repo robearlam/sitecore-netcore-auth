@@ -11,11 +11,11 @@ ARG SOLUTION_IMAGE
 FROM ${DEBUG_PARENT_IMAGE} as debug
 WORKDIR /solution/src
 EXPOSE 80
-ENTRYPOINT ["dotnet", "watch", "-v", "--project", ".\\rendering", "run", "--no-launch-profile"]
+ENTRYPOINT ["dotnet", "watch", "-v", "--project", ".\\Project\\AuthSite\\rendering", "run", "--no-launch-profile"]
 
 FROM ${SOLUTION_IMAGE} as solution
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 as release
 WORKDIR /app
 COPY --from=solution /artifacts/rendering/ ./
 EXPOSE 80
-ENTRYPOINT ["dotnet", "sitecore-netcore-auth.dll"]
+ENTRYPOINT ["dotnet", "Project.AuthSite.Rendering.dll"]
