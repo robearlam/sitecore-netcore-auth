@@ -1,0 +1,4 @@
+tls:
+  certificates:
+    - certFile: C:\etc\traefik\certs\_wildcard.sitecore_netcore_auth.localhost.pem
+      keyFile: C:\etc\traefik\certs\_wildcard.sitecore_netcore_auth.localhost-key.pem

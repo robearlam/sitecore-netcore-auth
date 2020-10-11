@@ -1,0 +1,36 @@
+{
+    "namespace": "Items",
+    "items" : {
+        "includes": [
+            {
+                "name": "api-key",
+                "path": "/sitecore/system/Settings/Services/API Keys/sitecore-netcore-auth",
+                "scope": "singleItem"
+            },
+            {
+                "name": "templates",
+                "path": "/sitecore/templates/Project/sitecore-netcore-auth"
+            },
+            {
+                "name": "layouts",
+                "path": "/sitecore/layout/Layouts/Project/sitecore-netcore-auth"
+            },
+            {
+                "name": "renderings",
+                "path": "/sitecore/layout/Renderings/Project/sitecore-netcore-auth"
+            },
+            {
+                "name": "placeholders",
+                "path": "/sitecore/layout/Placeholder Settings/Project/sitecore-netcore-auth"
+            },
+            {
+                "name": "content",
+                "path": "/sitecore/content/sitecore-netcore-auth"
+            },
+            {
+                "name": "media",
+                "path": "/sitecore/media library/sitecore-netcore-auth"
+            }
+        ]
+    }
+}
