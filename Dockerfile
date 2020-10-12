@@ -33,6 +33,9 @@ COPY src/ ./src/
 # Build the Sitecore main platform artifacts
 RUN msbuild .\src\Project\AuthSite\platform\Project.AuthSite.Platform.csproj /p:Configuration=$env:BUILD_CONFIGURATION /m /p:DeployOnBuild=true /p:PublishProfile=Local
 
+# publish the Identity Server artifacts
+RUN msbuild .\src\Project\AuthSite\identity\Project.AuthSite.Identity.csproj /p:Configuration=$env:BUILD_CONFIGURATION /m /p:DeployOnBuild=true /p:PublishProfile=Local
+
 # Build the rendering host
 WORKDIR /build/src/Project/AuthSite/rendering
 RUN dotnet publish -c $env:BUILD_CONFIGURATION -o /build/rendering --no-restore
@@ -41,4 +44,5 @@ RUN dotnet publish -c $env:BUILD_CONFIGURATION -o /build/rendering --no-restore
 FROM mcr.microsoft.com/windows/nanoserver:1809
 WORKDIR /artifacts
 COPY --from=builder /build/docker/deploy/platform  ./sitecore/
+COPY --from=builder /build/docker/deploy/identity  ./identity/
 COPY --from=builder /build/rendering ./rendering/

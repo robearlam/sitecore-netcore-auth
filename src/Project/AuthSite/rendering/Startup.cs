@@ -1,5 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Globalization;
+using IdentityModel;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -7,6 +10,7 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Project.AuthSite.Rendering.Configuration;
 using Project.AuthSite.Rendering.Models;
 using Sitecore.AspNet.ExperienceEditor;
@@ -90,12 +94,37 @@ namespace Project.AuthSite.Rendering
                 options.SitecoreInstanceUri = Configuration.InstanceUri;
             });
 
-            services.AddAuthentication("Bearer")
-            .AddIdentityServerAuthentication("Bearer", options =>
-            {
-                options.ApiName = "sitecore-identity-server";
-                options.Authority = "https://id.sitecore_netcore_auth.localhost";
-            });
+            services.AddAuthentication(options =>
+                {
+                    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme = "oidc";
+                })
+                .AddCookie(options =>
+                {
+                    options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+                    options.Cookie.Name = "mvcimplicit";
+                })
+                .AddOpenIdConnect("oidc", options =>
+                {
+                    options.ClientId = "AuthSite";
+                    options.Authority = Configuration.IDServerAuthority;
+                    options.GetClaimsFromUserInfoEndpoint = true;
+                    options.ResponseType = "code token";
+
+                    options.Scope.Clear();
+                    options.Scope.Add("openid");
+                    options.Scope.Add("sitecore.profile");
+                    options.Scope.Add("offline_access");
+                    options.Scope.Add("sitecore.profile.api");
+
+                    options.SaveTokens = true;
+
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        NameClaimType = JwtClaimTypes.Name,
+                        RoleClaimType = JwtClaimTypes.Role,
+                    };
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -3,16 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform", "src\Project\AuthSite\platform\Project.AuthSite.Platform.csproj", "{816F099C-E14B-4468-9E34-87F993C6484D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.AuthSite.Platform", "src\Project\AuthSite\platform\Project.AuthSite.Platform.csproj", "{816F099C-E14B-4468-9E34-87F993C6484D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RenderingHost", "src\Project\AuthSite\rendering\Project.AuthSite.Rendering.csproj", "{6F4279AB-4049-42F0-AFD0-06062586BCF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project.AuthSite.Rendering", "src\Project\AuthSite\rendering\Project.AuthSite.Rendering.csproj", "{6F4279AB-4049-42F0-AFD0-06062586BCF6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{196B5D43-B228-4632-9BC3-EAAF79B4EDA5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Solution Files", ".Solution Files", "{196B5D43-B228-4632-9BC3-EAAF79B4EDA5}"
 	ProjectSection(SolutionItems) = preProject
 		nuget.config = nuget.config
 		README.md = README.md
 		sitecore.json = sitecore.json
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{6EEA6A0E-7F9D-4834-8466-9458CF02B4B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{2B17781D-B5B5-4AED-904C-1D6E4CADE392}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{943BCE33-8482-4E0F-876A-16CB49CB1172}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthSite", "AuthSite", "{C4A9446A-6A85-4E21-902B-4E6F68349386}"
+	ProjectSection(SolutionItems) = preProject
+		src\Project\AuthSite\Project.AuthSite.module.json = src\Project\AuthSite\Project.AuthSite.module.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.AuthSite.Identity", "src\Project\AuthSite\identity\Project.AuthSite.Identity.csproj", "{F8DD20AE-80CA-4958-9467-E24AA81AB2BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,9 +41,19 @@ Global
 		{6F4279AB-4049-42F0-AFD0-06062586BCF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F4279AB-4049-42F0-AFD0-06062586BCF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F4279AB-4049-42F0-AFD0-06062586BCF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8DD20AE-80CA-4958-9467-E24AA81AB2BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8DD20AE-80CA-4958-9467-E24AA81AB2BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8DD20AE-80CA-4958-9467-E24AA81AB2BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8DD20AE-80CA-4958-9467-E24AA81AB2BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{816F099C-E14B-4468-9E34-87F993C6484D} = {C4A9446A-6A85-4E21-902B-4E6F68349386}
+		{6F4279AB-4049-42F0-AFD0-06062586BCF6} = {C4A9446A-6A85-4E21-902B-4E6F68349386}
+		{C4A9446A-6A85-4E21-902B-4E6F68349386} = {6EEA6A0E-7F9D-4834-8466-9458CF02B4B0}
+		{F8DD20AE-80CA-4958-9467-E24AA81AB2BA} = {C4A9446A-6A85-4E21-902B-4E6F68349386}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A7C4987-3A11-41A9-8915-5457EF7B5A6F}

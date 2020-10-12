@@ -1,4 +1,5 @@
 using System.Net;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Project.AuthSite.Rendering.Models;
@@ -11,6 +12,7 @@ namespace Project.AuthSite.Rendering.Controllers
     /// <summary>
     /// The entry point controller for this sample site.
     /// </summary>
+    [Authorize]
     public class DefaultController : Controller
     {
         /// <summary>
