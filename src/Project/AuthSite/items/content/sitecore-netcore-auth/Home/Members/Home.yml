@@ -1,0 +1,54 @@
+﻿---
+ID: "0097c80f-a0a7-424a-8ffa-9e3752e6e44b"
+Parent: "f7361071-89ec-4404-ac43-f1f3092dc1ae"
+Template: "85cd20bd-9e45-40d1-bb24-9b165667ea7a"
+Path: "/sitecore/content/sitecore-netcore-auth/Home/Members/Home"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{704C35CE-5904-4AE1-96B9-D6A655B65937}"
+          s:ds="{ED9158A2-DFA5-4419-913D-41DFAE7C4380}"
+          s:id="{E6E28E91-A0A4-43D1-96E8-10DA545F92A2}"
+          s:par=""
+          s:ph="/sitecore-netcore-auth-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200526T204317Z
+    - ID: "4a220fd7-96db-4082-baeb-0ecae85ef200"
+      Hint: Banner
+      Value: |
+        <image mediaid="{EDBBE374-8BB8-4D04-A137-2BDFD8995AC0}" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "48671c39-bca3-49bc-946a-53fbff018f9a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20201012T001638Z
+    - ID: "e5365688-b6bb-41ab-aafb-3215d68507d8"
+      Hint: Title
+      Value: "Welcome to the Members Homepage!"

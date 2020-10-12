@@ -89,6 +89,13 @@ namespace Project.AuthSite.Rendering
                 // from the Rendering Host and will be used to proxy robot detection scripts.
                 options.SitecoreInstanceUri = Configuration.InstanceUri;
             });
+
+            services.AddAuthentication("Bearer")
+            .AddIdentityServerAuthentication("Bearer", options =>
+            {
+                options.ApiName = "sitecore-identity-server";
+                options.Authority = "https://id.sitecore_netcore_auth.localhost";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -120,6 +127,9 @@ namespace Project.AuthSite.Rendering
             // Standard ASP.NET Core routing and static file support.
             app.UseRouting();
             app.UseStaticFiles();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             // Enable ASP.NET Core Localization, which is required for Sitecore content localization.
             app.UseRequestLocalization(options =>
