@@ -51,6 +51,7 @@ services:
       # These values add to/override ASP.NET Core configuration values.
       # See rendering host Startup for details.
       Sitecore__InstanceUri: "http://cm"
+      Sitecore__IDServerAuthority: "http://id"
       Sitecore__RenderingHostUri: "https://${RENDERING_HOST}"
       Sitecore__EnableExperienceEditor: "true"
     depends_on:

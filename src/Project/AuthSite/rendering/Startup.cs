@@ -109,6 +109,7 @@ namespace Project.AuthSite.Rendering
                     options.ClientId = "AuthSite";
                     options.Authority = Configuration.IDServerAuthority;
                     options.GetClaimsFromUserInfoEndpoint = true;
+                    options.RequireHttpsMetadata = false;
                     options.ResponseType = "code token";
 
                     options.Scope.Clear();

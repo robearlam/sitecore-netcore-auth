@@ -1,8 +1,8 @@
 ﻿---
-ID: "ed9158a2-dfa5-4419-913d-41dfae7c4380"
-Parent: "0097c80f-a0a7-424a-8ffa-9e3752e6e44b"
+ID: "6e499575-a810-4b31-8c38-5f1bfb175f54"
+Parent: "c657134c-0004-4784-891f-4db065929258"
 Template: "b69f0620-8f79-44c5-8fc9-fb39c1f9d0b3"
-Path: "/sitecore/content/sitecore-netcore-auth/Home/Members/Home/Content"
+Path: "/sitecore/content/sitecore-netcore-auth/Home/Page Components/Content"
 SharedFields:
 - ID: "0c894aab-962b-4a84-b923-cb24b05e60d2"
   Hint: __Ribbon
@@ -88,11 +88,13 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "876a23cf-9297-4762-899d-cbe53212503d"
+      Value: "daedee11-81da-4f62-bbc4-43b998b1c2ec"
     - ID: "9ecac404-cb07-4321-9e69-f7837c7f383b"
       Hint: Text
       Value: |
-        <p style="line-height: 22px;">This is the members area, secured and only accessible to authenticated users!</p>
+        <p style="line-height: 22px;">From a single connected platform that also integrates with other customer-facing platforms, to a single view of the customer in a big data marketing repository, to completely eliminating much of the complexity that has previously held marketers back, the latest version of Sitecore makes customer experience highly achievable. Learn how the latest version of Sitecore gives marketers the complete data, integrated tools, and automation capabilities to engage customers throughout an iterative lifecycle &ndash; the technology foundation absolutely necessary to win customers for life.</p>
+        <p>For further information, please go to the <a rel="noopener noreferrer" href="https://doc.sitecore.com/" target="_blank" title="Sitecore Documentation site">Sitecore Documentation site</a>.</p>
+        <p>Access the <a href="~/link.aspx?_id=0097C80FA0A7424A8FFA9E3752E6E44B&amp;_z=z">Members Area</a>&nbsp;for some super secret information.</p>
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -102,7 +104,7 @@ Languages:
       Value: 
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20201012T001658Z
+      Value: 20201012T002045Z
     - ID: "f6f7ce1a-c2a8-498d-a352-7a4739daa6d0"
       Hint: Title
-      Value: Members Area
+      Value: "Sitecore Experience Platform - sitecore-netcore-auth"

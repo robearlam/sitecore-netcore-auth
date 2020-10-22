@@ -1,0 +1,23 @@
+﻿---
+ID: "1d1d9136-221d-4560-b67d-b91788816602"
+Parent: "0097c80f-a0a7-424a-8ffa-9e3752e6e44b"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: "/sitecore/content/sitecore-netcore-auth/Home/Members/Home/Page Components"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20201022T000422Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cea8c12e-b29a-4a7c-bc28-5173c5250465"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20201022T000422Z

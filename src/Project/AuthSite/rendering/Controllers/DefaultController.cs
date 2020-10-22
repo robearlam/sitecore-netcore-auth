@@ -12,7 +12,7 @@ namespace Project.AuthSite.Rendering.Controllers
     /// <summary>
     /// The entry point controller for this sample site.
     /// </summary>
-    [Authorize]
+    //[Authorize]
     public class DefaultController : Controller
     {
         /// <summary>

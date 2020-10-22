@@ -27,6 +27,8 @@
 					<AllowedCorsOrigins>
 						<AllowedCorsOriginsGroup1>https://localhost:5001</AllowedCorsOriginsGroup1>
 						<AllowedCorsOriginsGroup2>http://localhost:5000</AllowedCorsOriginsGroup2>
+						<AllowedCorsOriginsGroup3>https://www.sitecore_netcore_auth.localhost/</AllowedCorsOriginsGroup3>
+						<AllowedCorsOriginsGroup3>http://rendering/</AllowedCorsOriginsGroup3>
 					</AllowedCorsOrigins>
 					<AllowedScopes>
 						<AllowedScope1>openid</AllowedScope1>
