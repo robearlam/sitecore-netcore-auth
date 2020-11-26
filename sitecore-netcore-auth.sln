@@ -27,6 +27,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthSite", "AuthSite", "{C4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.AuthSite.Identity", "src\Project\AuthSite\identity\Project.AuthSite.Identity.csproj", "{F8DD20AE-80CA-4958-9467-E24AA81AB2BA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{E74F3AE6-DBF7-41BF-8D25-85F845A4A92F}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+		docker-compose.override.yml = docker-compose.override.yml
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +62,7 @@ Global
 		{6F4279AB-4049-42F0-AFD0-06062586BCF6} = {C4A9446A-6A85-4E21-902B-4E6F68349386}
 		{C4A9446A-6A85-4E21-902B-4E6F68349386} = {6EEA6A0E-7F9D-4834-8466-9458CF02B4B0}
 		{F8DD20AE-80CA-4958-9467-E24AA81AB2BA} = {C4A9446A-6A85-4E21-902B-4E6F68349386}
+		{E74F3AE6-DBF7-41BF-8D25-85F845A4A92F} = {196B5D43-B228-4632-9BC3-EAAF79B4EDA5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A7C4987-3A11-41A9-8915-5457EF7B5A6F}

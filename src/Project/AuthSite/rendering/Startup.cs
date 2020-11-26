@@ -185,6 +185,12 @@ namespace Project.AuthSite.Rendering
                     new {controller = "Default", action = "Error"}
                 );
 
+                endpoints.MapControllerRoute(
+                    "secure",
+                    "secure",
+                    new { controller = "Secure", action = "Index" }
+                );
+
                 // Enables the default Sitecore URL pattern with a language prefix.
                 endpoints.MapSitecoreLocalizedRoute("sitecore", "Index", "Default");
 
