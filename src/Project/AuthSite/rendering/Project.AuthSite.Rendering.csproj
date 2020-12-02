@@ -1,34 +1,42 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>0dd80cb0-354b-425e-aa55-eb26c6f571fc</UserSecretsId>
-    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
-    <DockerfileContext>..\..\..\..\..</DockerfileContext>
-    <RootNamespace>Project.AuthSite.Rendering</RootNamespace>
-    <AssemblyName>Project.AuthSite.Rendering</AssemblyName>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UserSecretsId>0dd80cb0-354b-425e-aa55-eb26c6f571fc</UserSecretsId>
+		<DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+		<DockerfileContext>..\..\..\..\..</DockerfileContext>
+		<RootNamespace>Project.AuthSite.Rendering</RootNamespace>
+		<AssemblyName>Project.AuthSite.Rendering</AssemblyName>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="IdentityModel" Version="4.4.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="3.1.8" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.1" />
-    <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
-    <PackageReference Include="Sitecore.AspNet.ExperienceEditor" Version="14.0.1" />
-    <PackageReference Include="Sitecore.AspNet.Tracking" Version="14.0.1" />
-    <PackageReference Include="Sitecore.AspNet.Tracking.VisitorIdentification" Version="14.0.1" />
-    <PackageReference Include="Sitecore.LayoutService.Client" Version="14.0.1" />
-    <PackageReference Include="Sitecore.AspNet.RenderingEngine" Version="14.0.1" />
-  </ItemGroup>
+	<Target Name="FixDotnetWatch" AfterTargets="_CoreCollectWatchItems">
+		<ItemGroup>
+			<_WatchRelativePath Include="@(Watch)" Condition="'%(Identity)' != '%(Watch.FullPath)'" />
+			<Watch Remove="@(_WatchRelativePath)" />
+			<Watch Include="%(_WatchRelativePath.FullPath)" />
+		</ItemGroup>
+	</Target>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\css\" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="IdentityModel" Version="4.4.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="3.1.8" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.1" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="3.1.1" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+		<PackageReference Include="Sitecore.AspNet.ExperienceEditor" Version="14.0.1" />
+		<PackageReference Include="Sitecore.AspNet.Tracking" Version="14.0.1" />
+		<PackageReference Include="Sitecore.AspNet.Tracking.VisitorIdentification" Version="14.0.1" />
+		<PackageReference Include="Sitecore.LayoutService.Client" Version="14.0.1" />
+		<PackageReference Include="Sitecore.AspNet.RenderingEngine" Version="14.0.1" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Feature\Auth\rendering\Feature.Auth.Rendering.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="wwwroot\css\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Feature\Auth\rendering\Feature.Auth.Rendering.csproj" />
+	</ItemGroup>
 
 </Project>

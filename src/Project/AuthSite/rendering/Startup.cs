@@ -71,6 +71,7 @@ namespace Project.AuthSite.Rendering
                     //Register your components here
                     options
                         .AddModelBoundView<ContentBlockModel>("ContentBlock")
+                        .AddFeatureAuth()
                         .AddDefaultPartialView("_ComponentNotFound");
                 })
                 // Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that

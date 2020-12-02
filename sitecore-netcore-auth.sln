@@ -36,6 +36,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{E74F3A
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth", "Auth", "{C09D4AC5-10BA-4093-939D-471D05BB366E}"
+	ProjectSection(SolutionItems) = preProject
+		src\Feature\Auth\Feature.Auth.module.json = src\Feature\Auth\Feature.Auth.module.json
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Feature.Auth.Rendering", "src\Feature\Auth\rendering\Feature.Auth.Rendering.csproj", "{B048DD81-7440-4963-9993-A40771FF8443}"
 EndProject

@@ -1,0 +1,11 @@
+{
+  "namespace": "Feature.Auth",
+  "items": {
+    "includes": [
+      {
+        "name": "renderings",
+        "path": "/sitecore/layout/Renderings/Feature/Auth"
+      }
+    ]
+  }
+}

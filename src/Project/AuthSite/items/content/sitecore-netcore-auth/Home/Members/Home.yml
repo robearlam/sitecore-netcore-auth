@@ -7,7 +7,7 @@ SharedFields:
 - ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
   Hint: __Security
   Value: |
-    au|extranet\Anonymous|pe|-item:read|
+    au|extranet\Anonymous|pe|-item:read|pd|-item:read|
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -45,14 +45,14 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "cac2117f-82c4-44d7-847c-ddc9b6964e66"
+      Value: "0d9b4637-1a11-4866-987b-408cf0021bd5"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20201021T235004Z
+      Value: 20201127T004028Z
     - ID: "e5365688-b6bb-41ab-aafb-3215d68507d8"
       Hint: Title
       Value: "Welcome to the Members Homepage!"
