@@ -35,6 +35,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{E74F3A
 		Dockerfile = Dockerfile
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth", "Auth", "{C09D4AC5-10BA-4093-939D-471D05BB366E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Feature.Auth.Rendering", "src\Feature\Auth\rendering\Feature.Auth.Rendering.csproj", "{B048DD81-7440-4963-9993-A40771FF8443}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +57,10 @@ Global
 		{F8DD20AE-80CA-4958-9467-E24AA81AB2BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8DD20AE-80CA-4958-9467-E24AA81AB2BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8DD20AE-80CA-4958-9467-E24AA81AB2BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B048DD81-7440-4963-9993-A40771FF8443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B048DD81-7440-4963-9993-A40771FF8443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B048DD81-7440-4963-9993-A40771FF8443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B048DD81-7440-4963-9993-A40771FF8443}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +71,8 @@ Global
 		{C4A9446A-6A85-4E21-902B-4E6F68349386} = {6EEA6A0E-7F9D-4834-8466-9458CF02B4B0}
 		{F8DD20AE-80CA-4958-9467-E24AA81AB2BA} = {C4A9446A-6A85-4E21-902B-4E6F68349386}
 		{E74F3AE6-DBF7-41BF-8D25-85F845A4A92F} = {196B5D43-B228-4632-9BC3-EAAF79B4EDA5}
+		{C09D4AC5-10BA-4093-939D-471D05BB366E} = {943BCE33-8482-4E0F-876A-16CB49CB1172}
+		{B048DD81-7440-4963-9993-A40771FF8443} = {C09D4AC5-10BA-4093-939D-471D05BB366E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A7C4987-3A11-41A9-8915-5457EF7B5A6F}

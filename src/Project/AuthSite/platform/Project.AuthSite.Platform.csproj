@@ -69,6 +69,7 @@
     <Content Include="App_Config\Include\Sitecore.Media.config" />
     <Content Include="App_Config\Include\Sites.config" />
     <Content Include="Project.AuthSite.Platform.targets" />
+    <Content Include="App_Config\Include\AuthenticationOverides.config" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="README.md" />
     <None Include="web.config" />

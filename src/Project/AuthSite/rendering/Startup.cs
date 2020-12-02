@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using Feature.Auth.Rendering.Extensions;
 using IdentityModel;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
@@ -10,6 +11,7 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Project.AuthSite.Rendering.Configuration;
 using Project.AuthSite.Rendering.Models;
@@ -41,6 +43,8 @@ namespace Project.AuthSite.Rendering
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            IdentityModelEventSource.ShowPII = true;
+
             services
                 .AddRouting()
                 // You must enable ASP.NET Core localization to utilize localized Sitecore content.
@@ -72,6 +76,8 @@ namespace Project.AuthSite.Rendering
                 // Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that
                 // Sitecore Media and other links have the correct scheme.
                 .ForwardHeaders()
+                //handle the forwarding of authentication cookies
+                .ForwardAuthCookies()
                 // Enable forwarding of relevant headers and client IP for Sitecore Tracking and Personalization.
                 .WithTracking()
                 // Enable support for the Experience Editor.
@@ -102,7 +108,7 @@ namespace Project.AuthSite.Rendering
                 .AddCookie(options =>
                 {
                     options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
-                    options.Cookie.Name = "mvcimplicit";
+                    options.Cookie.Name = "sitecore_userticket";
                 })
                 .AddOpenIdConnect("oidc", options =>
                 {

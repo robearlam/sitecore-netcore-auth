@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<RootNamespace>Feature.Auth.Rendering</RootNamespace>
+		<AssemblyName>Feature.Auth.Rendering</AssemblyName>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Sitecore.AspNet.RenderingEngine.Abstractions" Version="14.0.1" />
+		<PackageReference Include="Sitecore.AspNet.RenderingEngine" Version="14.0.1" />
+		<PackageReference Include="Sitecore.LayoutService.Client.Abstractions" Version="14.0.1" />
+	</ItemGroup>
+
+</Project>
