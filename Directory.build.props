@@ -1,4 +1,7 @@
 <Project>
+	<PropertyGroup>
+		<SitecoreAspNetVersion>15.0.1</SitecoreAspNetVersion>
+	</PropertyGroup>
   <!--
     These props ensure there is no conflict between builds within your Rendering Host container ('dotnet watch'),
     and local builds on the container host (e.g. in Visual Studio).

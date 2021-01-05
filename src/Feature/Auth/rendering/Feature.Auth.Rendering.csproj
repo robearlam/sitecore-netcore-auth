@@ -8,9 +8,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Sitecore.AspNet.RenderingEngine.Abstractions" Version="14.0.1" />
-		<PackageReference Include="Sitecore.AspNet.RenderingEngine" Version="14.0.1" />
-		<PackageReference Include="Sitecore.LayoutService.Client.Abstractions" Version="14.0.1" />
+		<PackageReference Include="Sitecore.AspNet.RenderingEngine.Abstractions" Version="$(SitecoreAspNetVersion)" />
+		<PackageReference Include="Sitecore.AspNet.RenderingEngine" Version="$(SitecoreAspNetVersion)" />
+		<PackageReference Include="Sitecore.LayoutService.Client.Abstractions" Version="$(SitecoreAspNetVersion)" />
 	</ItemGroup>
 
 </Project>
