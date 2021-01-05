@@ -1,5 +1,4 @@
 using System.Net;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Project.AuthSite.Rendering.Models;
@@ -36,6 +35,7 @@ namespace Project.AuthSite.Rendering.Controllers
                             Response.StatusCode = (int) HttpStatusCode.NotFound;
                             return View("NotFound", request.Response.Content.Sitecore.Context);
                         case InvalidRequestSitecoreLayoutServiceClientException badRequest:
+                            return Redirect("/Login");
                         case CouldNotContactSitecoreLayoutServiceClientException transportError:
                         case InvalidResponseSitecoreLayoutServiceClientException serverError:
                         default:
