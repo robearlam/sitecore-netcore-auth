@@ -2,8 +2,8 @@
 A repository showing how to enable authentication in a .NET Core headless Sitecore application.
 
 # Setup
-.\init.ps1 -InitEnv -LicenseXmlPath "<<LICENSE_PATH>>" -AdminPassword "b"
-.\up.ps1
+ - .\init.ps1 -InitEnv -LicenseXmlPath "<<LICENSE_PATH>>" -AdminPassword "b"
+ - .\up.ps1
 
 # Create a test user
 Create a Sitecore user with the username `DotNetUser` and a password of your choice
