@@ -13,9 +13,15 @@ SharedFields:
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
           uid="{704C35CE-5904-4AE1-96B9-D6A655B65937}"
+          p:before="*"
           s:ds="{3CF0270C-83FA-4BAB-A54A-BC4EB43D1536}"
           s:id="{E6E28E91-A0A4-43D1-96E8-10DA545F92A2}"
           s:par=""
+          s:ph="/sitecore-netcore-auth-main" />
+        <r
+          uid="{FB5D47EF-92D2-4526-A95D-4664F5FA6BF1}"
+          p:after="*[1=2]"
+          s:id="{23C81A39-7635-45C7-9615-4F1F35F1B33E}"
           s:ph="/sitecore-netcore-auth-main" />
       </d>
     </r>
@@ -29,14 +35,14 @@ Languages:
       Value: 20201021T235026Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2feaf710-32ea-48e5-b3d8-45cc6a11f0dc"
+      Value: "2c66a516-3030-417b-ab12-134a0cb2288a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20201022T000340Z
+      Value: 20210107T030438Z
     - ID: "e5365688-b6bb-41ab-aafb-3215d68507d8"
       Hint: Title
       Value: Login

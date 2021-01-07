@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Net.Http.Headers;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -26,16 +28,16 @@ namespace Feature.Auth.Rendering.Controllers
         [Route("/auth/login", Name = "Login")]
         public async Task<IActionResult> Login(Models.Login login)
         {
-            var request = new HttpRequestMessage(HttpMethod.Post, $"{configuration["Sitecore:InstanceUri"]}/sitecore/api/ssc/auth/login");
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, $"{configuration["Sitecore:InstanceUri"]}/sitecore/api/ssc/auth/login");
             request.Content = new StringContent($"{{\"domain\":\"extranet\",\"username\":\"{login.Username}\",\"password\":\"{login.Password}\"}}", Encoding.UTF8, "application/json");
-            var client = clientFactory.CreateClient();
-            var response = await client.SendAsync(request);          
+            HttpClient client = clientFactory.CreateClient();
+            HttpResponseMessage response = await client.SendAsync(request);          
 
             if (response.IsSuccessStatusCode)
             {
                 if (response.Headers.TryGetValues("Set-Cookie", out var newCookies))
                 {
-                    foreach (var item in SetCookieHeaderValue.ParseList(newCookies.ToList()))
+                    foreach (SetCookieHeaderValue item in SetCookieHeaderValue.ParseList(newCookies.ToList()))
                     {
                         if (item.Name.Value == ".AspNet.Cookies")
                         {

@@ -20,15 +20,25 @@ namespace Feature.Auth.Rendering.Extensions
                     renderingOptions.MapToRequest((httpRequest, layoutRequest) =>
                     {
                         Dictionary<string, string[]> dictionary;
-                        if (layoutRequest.TryGetHeadersCollection(out dictionary) && 
-                            dictionary.ContainsKey("Cookie") && 
-                            dictionary["Cookie"].Any(x => x.StartsWith(".AspNet.Cookies=")))
+                        if (layoutRequest.TryGetHeadersCollection(out dictionary))
                         {
-                            var authCookie = dictionary["Cookie"].FirstOrDefault(x => x.StartsWith(".AspNet.Cookies="));
-                            var cookies = dictionary["Cookie"].Where(x => !x.StartsWith(".AspNet.Cookies=")).ToList();
-                            cookies.Add(System.Net.WebUtility.UrlDecode(authCookie));
-                            cookies.Reverse();      //auth cookie needs to be the first one ¯\_(ツ)_/¯
-                            dictionary["Cookie"] = cookies.ToArray();
+                            if (dictionary.ContainsKey("Cookie"))
+                            {
+                                var cookies = dictionary["Cookie"];
+                                if(cookies.Length == 1 && cookies[0].IndexOf(';') > -1)
+                                {
+                                    cookies = cookies[0].Split(';').Select(t => t.Trim()).ToArray();
+                                }
+
+                                if (cookies.Any(x => x.StartsWith(".AspNet.Cookies=")))
+                                {
+                                    var authCookie = cookies.FirstOrDefault(x => x.StartsWith(".AspNet.Cookies="));
+                                    cookies = cookies.Where(x => !x.StartsWith(".AspNet.Cookies=")).ToArray();
+                                    cookies.ToList().Add(System.Net.WebUtility.UrlDecode(authCookie));
+                                    cookies.Reverse();      //auth cookie needs to be the first one ¯\_(ツ)_/¯
+                                    dictionary["Cookie"] = cookies.ToArray();
+                                }
+                            }
                         }
                     });
                 }));

@@ -5,6 +5,7 @@
 		<RootNamespace>Feature.Auth.Rendering</RootNamespace>
 		<AssemblyName>Feature.Auth.Rendering</AssemblyName>
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+		<CopyRefAssembliesToPublishDirectory>true</CopyRefAssembliesToPublishDirectory>
 	</PropertyGroup>
 
 	<ItemGroup>
